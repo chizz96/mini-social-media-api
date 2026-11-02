@@ -97,7 +97,7 @@ const deletePost = async (req, res) => {
         const post = await Post.findAll({where : { id }})
 
         if (!post){
-           return req.status(404).json({message: "Post not found"})
+           return res.status(404).json({message: "Post not found"})
         }
 
         await Post.destroy({where : { id }})

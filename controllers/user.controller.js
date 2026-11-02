@@ -101,7 +101,7 @@ const deleteUser = async (req, res) => {
         const user = await User.findAll({where : { id }})
 
         if (!user){
-            return req.status(404).json({message: "user not found"})
+            return res.status(404).json({message: "user not found"})
         }
 
         await User.destroy({where : { id }})
