@@ -54,7 +54,7 @@ const getPostbyPk = async(req, res)=> {
             include:[{
                     model: User,
                     as:"userpost",
-                    attribute:["firstName", "lastName"]
+                    attributes:["firstName", "lastName"]
                 }]
         })
 
